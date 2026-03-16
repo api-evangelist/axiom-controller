@@ -1,99 +1,66 @@
+aid: axiom-controller
 name: Axiom Controller
-description: Axiom Controller is a cloud-native observability platform that provides APIs for ingesting, querying, and managing telemetry data including logs, traces, and metrics.
-url: https://axiom.co
-created: '2024'
-modified: '2024'
-apis:
-- name: Axiom Ingest API
-  description: API for ingesting logs, events, and telemetry data into Axiom datasets
-  baseURL: https://api.axiom.co/v1
-  humanURL: https://axiom.co/docs/restapi/ingest
-  properties:
-  - type: Documentation
-    url: https://axiom.co/docs/restapi/ingest
-  - type: OpenAPI
-    url: https://api.axiom.co/v1/openapi.json
-  tags:
-  - Ingest
-  - Logs
-  - Events
-  - Telemetry
-- name: Axiom Query API
-  description: API for querying and analyzing data stored in Axiom datasets using APL (Axiom Processing Language)
-  baseURL: https://api.axiom.co/v1
-  humanURL: https://axiom.co/docs/restapi/query
-  properties:
-  - type: Documentation
-    url: https://axiom.co/docs/restapi/query
-  - type: OpenAPI
-    url: https://api.axiom.co/v1/openapi.json
-  tags:
-  - Query
-  - Analytics
-  - APL
-  - Search
-- name: Axiom Datasets API
-  description: API for managing datasets, including creation, deletion, and configuration
-  baseURL: https://api.axiom.co/v1
-  humanURL: https://axiom.co/docs/restapi/datasets
-  properties:
-  - type: Documentation
-    url: https://axiom.co/docs/restapi/datasets
-  - type: OpenAPI
-    url: https://api.axiom.co/v1/openapi.json
-  tags:
-  - Datasets
-  - Management
-  - Configuration
-- name: Axiom Monitors API
-  description: API for creating and managing monitors and alerts based on query results
-  baseURL: https://api.axiom.co/v1
-  humanURL: https://axiom.co/docs/restapi/monitors
-  properties:
-  - type: Documentation
-    url: https://axiom.co/docs/restapi/monitors
-  - type: OpenAPI
-    url: https://api.axiom.co/v1/openapi.json
-  tags:
-  - Monitors
-  - Alerts
-  - Notifications
-- name: Axiom Organizations API
-  description: API for managing organization settings, users, and access control
-  baseURL: https://api.axiom.co/v1
-  humanURL: https://axiom.co/docs/restapi/organizations
-  properties:
-  - type: Documentation
-    url: https://axiom.co/docs/restapi/organizations
-  - type: OpenAPI
-    url: https://api.axiom.co/v1/openapi.json
-  tags:
-  - Organizations
-  - Users
-  - Access Control
-  - Teams
-common:
-- type: Authentication
-  url: https://axiom.co/docs/restapi/token
-- type: Status
-  url: https://status.axiom.co
-- type: Blog
-  url: https://axiom.co/blog
-- type: Pricing
-  url: https://axiom.co/pricing
-- type: Terms of Service
-  url: https://axiom.co/terms
-- type: Privacy Policy
-  url: https://axiom.co/privacy
-maintainers:
-- FN: Axiom
-  email: support@axiom.co
-  url: https://axiom.co
+description: >-
+  Axiom is a cloud-native observability platform providing APIs for ingesting,
+  querying, and managing telemetry data including logs, traces, and metrics
+  with support for datasets, monitors, and organization management.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- Observability
-- Logging
-- Analytics
-- Monitoring
-- Cloud Native
-- APL
-- Telemetry
+  - Observability
+  - Logging
+  - Analytics
+  - Monitoring
+  - Cloud Native
+  - Telemetry
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/axiom-controller/refs/heads/main/apis.yml
+created: '2024-01-01'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: axiom-controller:axiom-ingest-api
+    name: Axiom Ingest API
+    description: API for ingesting logs, events, and telemetry data into Axiom datasets.
+    humanURL: https://axiom.co/docs/restapi/ingest
+    baseURL: https://api.axiom.co/v1
+    tags:
+      - Ingest
+      - Logs
+      - Events
+      - Telemetry
+    properties:
+      - type: Documentation
+        url: https://axiom.co/docs/restapi/ingest
+  - aid: axiom-controller:axiom-query-api
+    name: Axiom Query API
+    description: >-
+      API for querying and analyzing data stored in Axiom datasets using APL
+      (Axiom Processing Language).
+    humanURL: https://axiom.co/docs/restapi/query
+    baseURL: https://api.axiom.co/v1
+    tags:
+      - Query
+      - Analytics
+      - APL
+    properties:
+      - type: Documentation
+        url: https://axiom.co/docs/restapi/query
+common:
+  - type: Portal
+    url: https://axiom.co/
+  - type: Authentication
+    url: https://axiom.co/docs/restapi/token
+  - type: Status
+    url: https://status.axiom.co
+  - type: Blog
+    url: https://axiom.co/blog
+  - type: Terms of Service
+    url: https://axiom.co/terms
+  - type: Privacy Policy
+    url: https://axiom.co/privacy
+  - type: GitHub Organization
+    url: https://github.com/axiomhq
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
