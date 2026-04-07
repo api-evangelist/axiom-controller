@@ -7,11 +7,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Observability
-  - Logging
   - Analytics
-  - Monitoring
   - Cloud Native
+  - Logging
+  - Monitoring
+  - Observability
   - Telemetry
 url: >-
   https://raw.githubusercontent.com/api-evangelist/axiom-controller/refs/heads/main/apis.yml
@@ -25,9 +25,9 @@ apis:
     humanURL: https://axiom.co/docs/restapi/ingest
     baseURL: https://api.axiom.co/v1
     tags:
+      - Events
       - Ingest
       - Logs
-      - Events
       - Telemetry
     properties:
       - type: Documentation
@@ -40,9 +40,9 @@ apis:
     humanURL: https://axiom.co/docs/restapi/query
     baseURL: https://api.axiom.co/v1
     tags:
-      - Query
       - Analytics
       - APL
+      - Query
     properties:
       - type: Documentation
         url: https://axiom.co/docs/restapi/query
