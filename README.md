@@ -1,105 +1,45 @@
-# Axiom Controller (axiom-controller)
-Axiom Controller is a cloud-native observability platform that provides APIs for ingesting, querying, and managing telemetry data including logs, traces, and metrics.
+# Axiom Controller
 
-**URL:** [Visit APIs.json URL](https://axiom.co)
-
-## Tags:
-
- - Observability, Logging, Analytics, Monitoring, Cloud Native, APL, Telemetry
-
-## Timestamps
-
-- **Created:** 2024 
-- **Modified:** 2024 
+Axiom is a cloud-native observability platform providing APIs for ingesting, querying, and managing telemetry data including logs, traces, and metrics with support for datasets, monitors, and organization management.
 
 ## APIs
 
 ### Axiom Ingest API
-API for ingesting logs, events, and telemetry data into Axiom datasets
-
-**Human URL:** [https://axiom.co/docs/restapi/ingest](https://axiom.co/docs/restapi/ingest)
-
-
-#### Tags:
-
- - Ingest, Logs, Events, Telemetry
-
-#### Properties
-
-- [Documentation](https://axiom.co/docs/restapi/ingest)
-- [OpenAPI](https://api.axiom.co/v1/openapi.json)
+API for ingesting logs, events, and telemetry data into Axiom datasets.
+- **Documentation**: https://axiom.co/docs/restapi/ingest
 
 ### Axiom Query API
-API for querying and analyzing data stored in Axiom datasets using APL (Axiom Processing Language)
+API for querying and analyzing data stored in Axiom datasets using APL (Axiom Processing Language).
+- **Documentation**: https://axiom.co/docs/restapi/query
 
-**Human URL:** [https://axiom.co/docs/restapi/query](https://axiom.co/docs/restapi/query)
+## Features
 
+- **Log Ingestion** — Ingest logs from any source at massive scale with compression.
+- **APL Query Language** — Query telemetry data using Axiom Processing Language (APL), inspired by KQL.
+- **Dataset Management** — Organize telemetry data in datasets for granular access control.
+- **Monitors and Alerts** — Threshold-based and anomaly-detection monitors with Slack/PagerDuty integrations.
+- **OpenTelemetry Support** — Native support for OpenTelemetry traces, metrics, and logs via OTLP.
+- **Long-Term Retention** — Store telemetry data for extended periods at low cost.
+- **Dashboards** — Build custom dashboards with rich visualization.
 
-#### Tags:
+## Use Cases
 
- - Query, Analytics, APL, Search
+- **Application Logging** — Centralize application logs for debugging and troubleshooting.
+- **Infrastructure Monitoring** — Monitor infrastructure metrics and detect anomalies.
+- **Security Analytics** — Analyze security logs and audit trails for threat detection.
+- **Distributed Tracing** — Trace requests across microservices with OpenTelemetry.
+- **Business Analytics** — Analyze user behavior and business events stored as structured logs.
 
-#### Properties
+## Links
 
-- [Documentation](https://axiom.co/docs/restapi/query)
-- [OpenAPI](https://api.axiom.co/v1/openapi.json)
-
-### Axiom Datasets API
-API for managing datasets, including creation, deletion, and configuration
-
-**Human URL:** [https://axiom.co/docs/restapi/datasets](https://axiom.co/docs/restapi/datasets)
-
-
-#### Tags:
-
- - Datasets, Management, Configuration
-
-#### Properties
-
-- [Documentation](https://axiom.co/docs/restapi/datasets)
-- [OpenAPI](https://api.axiom.co/v1/openapi.json)
-
-### Axiom Monitors API
-API for creating and managing monitors and alerts based on query results
-
-**Human URL:** [https://axiom.co/docs/restapi/monitors](https://axiom.co/docs/restapi/monitors)
-
-
-#### Tags:
-
- - Monitors, Alerts, Notifications
-
-#### Properties
-
-- [Documentation](https://axiom.co/docs/restapi/monitors)
-- [OpenAPI](https://api.axiom.co/v1/openapi.json)
-
-### Axiom Organizations API
-API for managing organization settings, users, and access control
-
-**Human URL:** [https://axiom.co/docs/restapi/organizations](https://axiom.co/docs/restapi/organizations)
-
-
-#### Tags:
-
- - Organizations, Users, Access Control, Teams
-
-#### Properties
-
-- [Documentation](https://axiom.co/docs/restapi/organizations)
-- [OpenAPI](https://api.axiom.co/v1/openapi.json)
-
-## Common Properties
-
-- [Authentication](https://axiom.co/docs/restapi/token)
-- [Status](https://status.axiom.co)
-- [Blog](https://axiom.co/blog)
-- [Pricing](https://axiom.co/pricing)
-- [Terms of Service](https://axiom.co/terms)
-- [Privacy Policy](https://axiom.co/privacy)
+- **Portal**: https://axiom.co/
+- **Documentation**: https://axiom.co/docs
+- **Getting Started**: https://axiom.co/docs/get-started
+- **Pricing**: https://axiom.co/pricing
+- **Blog**: https://axiom.co/blog
+- **GitHub**: https://github.com/axiomhq
+- **Status**: https://status.axiom.co
 
 ## Maintainers
 
-**FN:** Axiom
-
-**Email:** support@axiom.co
+- **Kin Lane** — kin@apievangelist.com
