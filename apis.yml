@@ -33,6 +33,8 @@ apis:
   properties:
   - type: Documentation
     url: https://axiom.co/docs/restapi/ingest
+  - type: OpenAPI
+    url: openapi/axiom-controller-openapi.yml
 - aid: axiom-controller:axiom-query-api
   name: Axiom Query API
   description: >-
