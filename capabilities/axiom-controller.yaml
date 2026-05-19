@@ -1,0 +1,215 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Axiom Ingest Controller API
+  description: 'Axiom Ingest Controller API. 5 operations. Lead operation: Ingest data to edge deployment. Self-contained
+    Naftiko capability covering one Axiom Controller business surface.'
+  tags:
+  - Axiom Controller
+  - Axiom Ingest Controller API
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AXIOM_CONTROLLER_API_KEY: AXIOM_CONTROLLER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: axiom-controller
+    baseUri: https://api.axiom.co/v1
+    description: Axiom Ingest Controller API business capability. Self-contained, no shared references.
+    resources:
+    - name: datasets-dataset-ingest
+      path: /datasets/{dataset}/ingest
+      operations:
+      - name: post
+        method: POST
+        description: Ingest data to edge deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: edge-metrics
+      path: /edge/metrics
+      operations:
+      - name: post
+        method: POST
+        description: Run MPL metrics query against edge deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: edge-query
+      path: /edge/query
+      operations:
+      - name: post
+        method: POST
+        description: Run APL query against edge deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: edge-query-batch
+      path: /edge/query/batch
+      operations:
+      - name: post
+        method: POST
+        description: Run batch query against edge deployment
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: ingest-dataset
+      path: /ingest/{dataset}
+      operations:
+      - name: post
+        method: POST
+        description: Ingest data to a dataset
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+  exposes:
+  - type: rest
+    namespace: axiom-controller-rest
+    port: 8080
+    description: REST adapter for Axiom Ingest Controller API. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/datasets/{dataset}/ingest
+      name: datasets-dataset-ingest
+      description: REST surface for datasets-dataset-ingest.
+      operations:
+      - method: POST
+        name: post
+        description: Ingest data to edge deployment
+        call: axiom-controller.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/edge/metrics
+      name: edge-metrics
+      description: REST surface for edge-metrics.
+      operations:
+      - method: POST
+        name: post
+        description: Run MPL metrics query against edge deployment
+        call: axiom-controller.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/edge/query
+      name: edge-query
+      description: REST surface for edge-query.
+      operations:
+      - method: POST
+        name: post
+        description: Run APL query against edge deployment
+        call: axiom-controller.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/edge/query/batch
+      name: edge-query-batch
+      description: REST surface for edge-query-batch.
+      operations:
+      - method: POST
+        name: post
+        description: Run batch query against edge deployment
+        call: axiom-controller.post
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/ingest/{dataset}
+      name: ingest-dataset
+      description: REST surface for ingest-dataset.
+      operations:
+      - method: POST
+        name: post
+        description: Ingest data to a dataset
+        call: axiom-controller.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: axiom-controller-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Axiom Ingest Controller API. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: ingest-data-edge-deployment
+      description: Ingest data to edge deployment
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom-controller.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: run-mpl-metrics-query-against
+      description: Run MPL metrics query against edge deployment
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom-controller.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: run-apl-query-against-edge
+      description: Run APL query against edge deployment
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom-controller.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: run-batch-query-against-edge
+      description: Run batch query against edge deployment
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: axiom-controller.post
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: ingest-data-dataset
+      description: Ingest data to a dataset
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: axiom-controller.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
