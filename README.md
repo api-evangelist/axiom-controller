@@ -1,45 +1,87 @@
-# Axiom Controller
+# Axiom Controller (axiom-controller)
 
 Axiom is a cloud-native observability platform providing APIs for ingesting, querying, and managing telemetry data including logs, traces, and metrics with support for datasets, monitors, and organization management.
+
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/axiom-controller/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/axiom-controller/refs/heads/main/apis.yml)
+
+## Scope
+
+- **Type:** Index
+
+## Tags
+
+- Analytics
+- Cloud Native
+- Logging
+- Monitoring
+- Observability
+- Telemetry
+
+## Timestamps
+
+- **Created:** 2024-01-01
+- **Modified:** 2026-05-19
 
 ## APIs
 
 ### Axiom Ingest API
+
 API for ingesting logs, events, and telemetry data into Axiom datasets.
-- **Documentation**: https://axiom.co/docs/restapi/ingest
+
+- **Human URL:** [https://axiom.co/docs/restapi/ingest](https://axiom.co/docs/restapi/ingest)
+- **Base URL:** `https://api.axiom.co/v1`
+
+#### Tags
+
+- Events
+- Ingest
+- Logs
+- Telemetry
+
+#### Properties
+
+- [Documentation](https://axiom.co/docs/restapi/ingest)
+- [OpenAPI](openapi/axiom-controller-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
+- [Postman Collection](collections/axiom-controller.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/axiom-controller.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
 ### Axiom Query API
+
 API for querying and analyzing data stored in Axiom datasets using APL (Axiom Processing Language).
-- **Documentation**: https://axiom.co/docs/restapi/query
 
-## Features
+- **Human URL:** [https://axiom.co/docs/restapi/query](https://axiom.co/docs/restapi/query)
+- **Base URL:** `https://api.axiom.co/v1`
 
-- **Log Ingestion** — Ingest logs from any source at massive scale with compression.
-- **APL Query Language** — Query telemetry data using Axiom Processing Language (APL), inspired by KQL.
-- **Dataset Management** — Organize telemetry data in datasets for granular access control.
-- **Monitors and Alerts** — Threshold-based and anomaly-detection monitors with Slack/PagerDuty integrations.
-- **OpenTelemetry Support** — Native support for OpenTelemetry traces, metrics, and logs via OTLP.
-- **Long-Term Retention** — Store telemetry data for extended periods at low cost.
-- **Dashboards** — Build custom dashboards with rich visualization.
+#### Tags
 
-## Use Cases
+- Analytics
+- APL
+- Query
 
-- **Application Logging** — Centralize application logs for debugging and troubleshooting.
-- **Infrastructure Monitoring** — Monitor infrastructure metrics and detect anomalies.
-- **Security Analytics** — Analyze security logs and audit trails for threat detection.
-- **Distributed Tracing** — Trace requests across microservices with OpenTelemetry.
-- **Business Analytics** — Analyze user behavior and business events stored as structured logs.
+#### Properties
 
-## Links
+- [Documentation](https://axiom.co/docs/restapi/query)
+- [Postman Collection](collections/axiom-controller.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
+- [Open Collection](collections/axiom-controller.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-- **Portal**: https://axiom.co/
-- **Documentation**: https://axiom.co/docs
-- **Getting Started**: https://axiom.co/docs/get-started
-- **Pricing**: https://axiom.co/pricing
-- **Blog**: https://axiom.co/blog
-- **GitHub**: https://github.com/axiomhq
-- **Status**: https://status.axiom.co
+## Common Properties
+
+- [Portal](https://axiom.co/)
+- [Authentication](https://axiom.co/docs/restapi/token)
+- [Status Page](https://status.axiom.co)
+- [Blog](https://axiom.co/blog)
+- [Terms of Service](https://axiom.co/terms)
+- [Privacy Policy](https://axiom.co/privacy)
+- [GitHub Organization](https://github.com/axiomhq)
+- [Pricing](https://axiom.co/pricing)
+- [Documentation](https://axiom.co/docs)
+- [Getting Started](https://axiom.co/docs/get-started)
+- [Features](undefined)
+- [Use Cases](undefined)
+- [Integrations](undefined)
+- [M C P Server](https://github.com/axiomhq/mcp-server-axiom)
 
 ## Maintainers
 
-- **Kin Lane** — kin@apievangelist.com
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com
