@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Axiom Ingest Controller API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Ingest data to a dataset",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/ingest/:dataset",
+        "params": [
+          {
+            "name": "dataset",
+            "value": "",
+            "type": "path",
+            "description": "Target dataset name"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Accepts JSON, NDJSON, or CSV formatted event data for ingestion into the specified dataset."
+    },
+    {
+      "info": {
+        "name": "Ingest data to edge deployment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/datasets/:dataset/ingest",
+        "params": [
+          {
+            "name": "dataset",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Ingest data to edge deployment"
+    },
+    {
+      "info": {
+        "name": "Run APL query against edge deployment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/edge/query",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Run APL query against edge deployment"
+    },
+    {
+      "info": {
+        "name": "Run batch query against edge deployment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/edge/query/batch"
+      },
+      "docs": "Run batch query against edge deployment"
+    },
+    {
+      "info": {
+        "name": "Run MPL metrics query against edge deployment",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.axiom.co/v1/edge/metrics"
+      },
+      "docs": "Run MPL metrics query against edge deployment"
+    }
+  ],
+  "bundled": true
+}
