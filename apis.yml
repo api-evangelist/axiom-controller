@@ -45,6 +45,11 @@ apis:
       - type: Documentation
         url: https://axiom.co/docs/restapi/query
 common:
+  - type: DomainSecurity
+    url: security/axiom-controller-domain-security.yml
+  - name: Agent Skills
+    url: https://github.com/axiomhq/skills
+    type: AgentSkills
   - type: Portal
     url: https://axiom.co/
   - type: Authentication
