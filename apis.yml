@@ -45,6 +45,8 @@ apis:
       - type: Documentation
         url: https://axiom.co/docs/restapi/query
 common:
+  - type: AgenticAccess
+    url: agentic-access/axiom-controller-agentic-access.yml
   - type: DomainSecurity
     url: security/axiom-controller-domain-security.yml
   - name: Agent Skills
