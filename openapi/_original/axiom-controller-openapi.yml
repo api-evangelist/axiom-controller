@@ -1,0 +1,104 @@
+openapi: 3.1.0
+info:
+  title: Axiom Ingest Controller API
+  version: 1.0.0
+  description: >-
+    REST API for ingesting events into Axiom datasets and running APL/MPL queries
+    against the Axiom edge deployment.
+servers:
+  - url: https://api.axiom.co/v1
+x-generated-from: https://axiom.co/docs/restapi/ingest
+x-generated-by: claude-crawl-2026-05-08
+paths:
+  /ingest/{dataset}:
+    parameters:
+      - in: path
+        name: dataset
+        required: true
+        schema:
+          type: string
+        description: Target dataset name
+    post:
+      summary: Ingest data to a dataset
+      description: >-
+        Accepts JSON, NDJSON, or CSV formatted event data for ingestion into the
+        specified dataset.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                additionalProperties: true
+          application/x-ndjson:
+            schema:
+              type: string
+          text/csv:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Ingest summary
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /datasets/{dataset}/ingest:
+    parameters:
+      - in: path
+        name: dataset
+        required: true
+        schema:
+          type: string
+    post:
+      summary: Ingest data to edge deployment
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /edge/query:
+    post:
+      summary: Run APL query against edge deployment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Resource'
+      responses:
+        '200':
+          description: Query result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /edge/query/batch:
+    post:
+      summary: Run batch query against edge deployment
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+  /edge/metrics:
+    post:
+      summary: Run MPL metrics query against edge deployment
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Resource'
+components:
+  schemas:
+    Resource:
+      type: object
+      additionalProperties: true
