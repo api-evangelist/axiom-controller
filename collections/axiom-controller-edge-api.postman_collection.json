@@ -1,0 +1,262 @@
+{
+  "item": [
+    {
+      "id": "8459c757-1011-4555-8563-97adb3b0e53f",
+      "name": "Edge",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "89b88df4-0f2b-48e4-b318-a16dbaa3022b",
+          "name": "Run APL query against edge deployment",
+          "request": {
+            "name": "Run APL query against edge deployment",
+            "description": {},
+            "url": {
+              "path": [
+                "edge",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bad67921-6af6-43ad-b994-1fbee14ebe24",
+              "name": "Query result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "edge",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": 4655,\n  \"key_1\": 337,\n  \"key_2\": 2049.081865322714\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 4655,\n  \"key_1\": 337,\n  \"key_2\": 2049.081865322714\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "800d5688-82db-4c66-b1e8-c9c3fd8ebd43",
+          "name": "Run batch query against edge deployment",
+          "request": {
+            "name": "Run batch query against edge deployment",
+            "description": {},
+            "url": {
+              "path": [
+                "edge",
+                "query",
+                "batch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3cfd9e2d-cbb4-45a1-a095-a21058ab6bce",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "edge",
+                    "query",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 4655,\n  \"key_1\": 337,\n  \"key_2\": 2049.081865322714\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7b89a708-214c-4a80-a965-90b86569627f",
+          "name": "Run MPL metrics query against edge deployment",
+          "request": {
+            "name": "Run MPL metrics query against edge deployment",
+            "description": {},
+            "url": {
+              "path": [
+                "edge",
+                "metrics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9e366364-f4ee-4b82-ac0c-afd1fd44da16",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "edge",
+                    "metrics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"key_0\": 4655,\n  \"key_1\": 337,\n  \"key_2\": 2049.081865322714\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.axiom.co/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "acd0a100-a887-43fb-99d6-52a2de0e801a",
+    "name": "Axiom Ingest Controller Datasets Edge API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for ingesting events into Axiom datasets and running APL/MPL queries against the Axiom edge deployment.",
+      "type": "text/plain"
+    }
+  }
+}
