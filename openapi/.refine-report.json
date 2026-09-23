@@ -1,9 +1,7 @@
 {
   "provider": "axiom-controller",
   "sources": [
-    "axiom-controller-datasets-api-openapi.yml",
-    "axiom-controller-edge-api-openapi.yml",
-    "axiom-controller-ingest-api-openapi.yml"
+    "_ae-authored/axiom-controller-openapi.yml"
   ],
   "outputs": [
     "axiom-controller-datasets-api-openapi.yml",
@@ -13,6 +11,22 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "axiom-controller-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "axiom-controller-openapi.yml: tagged paths POST /ingest/{dataset} -> Ingest",
+    "axiom-controller-openapi.yml: tagged paths POST /datasets/{dataset}/ingest -> Datasets",
+    "axiom-controller-openapi.yml: tagged paths POST /edge/query -> Edge",
+    "axiom-controller-openapi.yml: tagged paths POST /edge/query/batch -> Edge",
+    "axiom-controller-openapi.yml: tagged paths POST /edge/metrics -> Edge",
+    "axiom-controller-openapi.yml: declared missing tag: Datasets",
+    "axiom-controller-openapi.yml: declared missing tag: Edge",
+    "axiom-controller-openapi.yml: declared missing tag: Ingest",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "axiom-controller-datasets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "axiom-controller-edge-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "axiom-controller-ingest-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
