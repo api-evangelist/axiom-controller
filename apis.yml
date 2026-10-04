@@ -98,6 +98,9 @@ apis:
   - type: Documentation
     url: https://axiom.co/docs/restapi/ingest
 common:
+  - type: CapabilityMap
+    url: capabilities/axiom-controller-capability-edges.yml
+    name: Axiom Controller Business Capability Map
   - type: Website
     url: https://www.axiom.co/
   - type: AgenticAccess
