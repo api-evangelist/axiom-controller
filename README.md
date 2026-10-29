@@ -1,4 +1,4 @@
-# Axiom Controller (axiom-controller)
+# Axiom Controller
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,86 +66,143 @@
 
 Axiom is a cloud-native observability platform providing APIs for ingesting, querying, and managing telemetry data including logs, traces, and metrics with support for datasets, monitors, and organization management.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/axiom-controller/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/axiom-controller/refs/heads/main/apis.yml)
+**Areas:** Analytics · Cloud-Native · Logging · Monitoring · Observability · Telemetry
 
-## Scope
+## Axiom Controller on APIs.io
 
-- **Type:** Index
+Everything profiled for Axiom Controller is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/axiom-controller/](https://apis.io/providers/axiom-controller/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Analytics
-- Cloud Native
-- Logging
-- Monitoring
-- Observability
-- Telemetry
+- [Axiom Query API](https://apis.io/apis/axiom-controller/axiom-query-api/) — API for querying and analyzing data stored in Axiom datasets using APL (Axiom Processing Language).
+- [Axiom Controller Datasets API](https://apis.io/apis/axiom-controller/axiom-controller-datasets-api/) — The Datasets API from Axiom Controller — 1 operation(s) for datasets.
+- [Axiom Controller Edge API](https://apis.io/apis/axiom-controller/axiom-controller-edge-api/) — The Edge API from Axiom Controller — 3 operation(s) for edge.
+- [Axiom Controller Ingest API](https://apis.io/apis/axiom-controller/axiom-controller-ingest-api/) — The Ingest API from Axiom Controller — 1 operation(s) for ingest.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-01-01
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Axiom Ingest API
+Model Context Protocol servers that expose the API to agents.
 
-API for ingesting logs, events, and telemetry data into Axiom datasets.
+- [MCP Server](https://apis.io/servers/axiom-controller/mcp-server/)
 
-- **Human URL:** [https://axiom.co/docs/restapi/ingest](https://axiom.co/docs/restapi/ingest)
-- **Base URL:** `https://api.axiom.co/v1`
+#### Agent skills (7)
 
-#### Tags
+Agent skills built on the API.
 
-- Events
-- Ingest
-- Logs
-- Telemetry
+- [axiom-alerting](https://apis.io/agent-skills/axiom-controller/axiom-alerting/)
+- [axiom-sre](https://apis.io/agent-skills/axiom-controller/axiom-sre/)
+- [building-dashboards](https://apis.io/agent-skills/axiom-controller/building-dashboards/)
+- [controlling-costs](https://apis.io/agent-skills/axiom-controller/controlling-costs/)
+- [query-metrics](https://apis.io/agent-skills/axiom-controller/query-metrics/)
+- [spl-to-apl](https://apis.io/agent-skills/axiom-controller/spl-to-apl/)
+- [writing-evals](https://apis.io/agent-skills/axiom-controller/writing-evals/)
 
-#### Properties
+#### Agentic access (1)
 
-- [Documentation](https://axiom.co/docs/restapi/ingest)
-- [OpenAPI](openapi/axiom-controller-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/axiom-controller.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/axiom-controller.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-### Axiom Query API
+- [Axiom Controller Agentic Access](https://apis.io/agentic-access/axiom-controller/axiom-controller-agentic-access/)
 
-API for querying and analyzing data stored in Axiom datasets using APL (Axiom Processing Language).
+#### Collections (4)
 
-- **Human URL:** [https://axiom.co/docs/restapi/query](https://axiom.co/docs/restapi/query)
-- **Base URL:** `https://api.axiom.co/v1`
+Postman and Open Collection request collections.
 
-#### Tags
+- [Axiom Ingest Controller API](https://apis.io/collections/axiom-controller/open-axiom-controller/)
+- [Axiom Ingest Controller Datasets API](https://apis.io/collections/axiom-controller/open-axiom-controller-datasets-api/)
+- [Axiom Ingest Controller Datasets Edge API](https://apis.io/collections/axiom-controller/open-axiom-controller-edge-api/)
+- [Axiom Controller Datasets Ingest API](https://apis.io/collections/axiom-controller/open-axiom-controller-ingest-api/)
 
-- Analytics
-- APL
-- Query
+#### Security (1)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://axiom.co/docs/restapi/query)
-- [Postman Collection](collections/axiom-controller.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/axiom-controller.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Axiom Controller Domain Security](https://apis.io/security/axiom-controller/axiom-controller-domain-security/)
 
-## Common Properties
+#### Plans and pricing (1)
 
-- [Portal](https://axiom.co/)
-- [Authentication](https://axiom.co/docs/restapi/token)
-- [Status Page](https://status.axiom.co)
-- [Blog](https://axiom.co/blog)
-- [Terms of Service](https://axiom.co/terms)
-- [Privacy Policy](https://axiom.co/privacy)
-- [GitHub Organization](https://github.com/axiomhq)
-- [Pricing](https://axiom.co/pricing)
+Published plans, tiers and prices.
+
+- [Axiom Controller Plans Pricing](https://apis.io/plans/axiom-controller/axiom-controller-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Axiom Controller Rate Limits](https://apis.io/rate-limits/axiom-controller/axiom-controller-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Axiom Controller Finops](https://apis.io/finops/axiom-controller/axiom-controller-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.axiom.co/)
 - [Documentation](https://axiom.co/docs)
-- [Getting Started](https://axiom.co/docs/get-started)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-- [M C P Server](https://github.com/axiomhq/mcp-server-axiom)
+- [Getting started](https://axiom.co/docs/get-started)
+- [Pricing](https://axiom.co/pricing)
+- [Blog](https://axiom.co/blog)
+- [Terms of service](https://axiom.co/terms)
+- [Privacy policy](https://axiom.co/privacy)
+- [GitHub](https://github.com/axiomhq)
+- [Status](https://status.axiom.co)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 36.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 70.0 |
+| Contract quality | 39.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 39.8 |
+| Access clarity | 39.5 |
+
+**Agent readiness 24.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | unknown |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/axiom-controller/](https://apis.io/providers/axiom-controller/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Axiom Controller: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/axiom-controller/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
